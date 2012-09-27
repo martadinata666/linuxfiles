@@ -1,0 +1,145 @@
+#---------------------------------------------
+# TINT2 CONFIG FILE
+#---------------------------------------------
+
+#---------------------------------------------
+# BACKGROUND AND BORDER
+#---------------------------------------------
+#launcher
+rounded = 0
+border_width = 0
+background_color = #EDECEB 100
+border_color = #ffffff 90
+
+#task active
+rounded = 0
+border_width = 2
+background_color = #000000 50
+border_color = #4A90D9 95
+
+rounded = 0
+border_width = 2
+background_color = #ffffff 95
+border_color = #ffffff 100
+
+#panel
+rounded = 0
+border_width = 0
+background_color = #ffffff 0
+border_color = #ffffff 100
+
+#systray
+rounded = 0
+border_width = 2
+background_color = #000000 20
+border_color = #4A90D9 95
+
+#task iconified
+rounded = 0
+border_width = 0
+background_color = #ffffff 70
+border_color = #000000 100
+#---------------------------------------------
+# PANEL
+#---------------------------------------------
+panel_layer = normal
+panel_monitor = all
+#panel_position = bottom left vertical
+panel_position = top center horizontal
+panel_size = 100% 36
+panel_margin = 0 0
+panel_padding = 0 0
+font_shadow = 0
+panel_background_id = 4
+wm_menu = 0
+panel_items = TSC
+#panel_items = C
+
+#---------------------------------------------
+# LAUNCHER
+#---------------------------------------------
+
+launcher_icon_theme = Faenza
+launcher_padding = 3 3 3 3 3 3
+launcher_icon_size = 32
+launcher_item_app = /usr/share/applications/links.desktop
+
+#launcher_icon_theme = Faenza
+launcher_padding = 3 3 3 3 3 3
+launcher_icon_size = 32
+launcher_item_app = /usr/share/applications/hotot.desktop
+
+#launcher_icon_theme = Faenza
+launcher_padding = 3 3 3 3 3 3
+launcher_icon_size = 32
+launcher_item_app = /usr/share/applications/lxappearance.desktop
+
+#---------------------------------------------
+# TASKBAR
+#---------------------------------------------
+#taskbar_mode = single_desktop
+taskbar_mode = multi_desktop
+taskbar_padding = 6 4 4
+taskbar_background_id = 0
+taskbar_active_background_id = 2
+
+
+#---------------------------------------------
+#TASKS
+#---------------------------------------------
+urgent_nb_of_blink = 100
+task_icon = 0
+task_text = 1
+task_centered = 1
+#task_maximum_size = 140 24
+task_maximum_size = 180 32
+task_padding = 5 5
+task_font = Cantarell 10
+task_font_color = 100
+#task_icon_asb = 100 100 100
+task_background_id = 0
+task_active_font_color = #000000 100
+task_urgent_font_color = #000000 100
+task_iconfied_font_color = #000000 90
+#task_active_icon_asb = 100 100 100
+task_active_background_id = 3
+task_iconfied_background_id = 6
+task_tooltip = 0
+
+#---------------------------------------------
+# TOOLTIP
+#---------------------------------------------
+tooltip_padding = 2 2
+tooltip_show_timeout = .5
+tooltip_hide_timeout = .5
+tooltip_background_id = 1
+tooltip_font_color = #000000 100
+tooltip_font = snap bold 10
+
+#---------------------------------------------
+# SYSTRAYBAR
+#---------------------------------------------
+systray = 1
+systray_padding = 4 3 2 4
+systray_background_id = 5
+systray_icon_size = 24
+systray_sort = right2left
+
+#---------------------------------------------
+# CLOCK
+#---------------------------------------------
+time1_format =%a, %d %B %Y
+time2_format = %H:%M
+time1_font = Cantarell bold 10
+time2_font = Cantarell bold 10
+clock_font_color = #ffffff 100
+clock_padding = 4 0
+clock_background_id = 2
+
+#---------------------------------------------
+# MOUSE ACTION ON TASK
+#---------------------------------------------
+mouse_middle = close
+mouse_right = none
+mouse_scroll_up = toggle
+mouse_scroll_down = iconify

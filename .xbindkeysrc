@@ -1,0 +1,33 @@
+"xscreensaver-command --lock"
+    m:0xc + c:46
+    Control+Alt + l
+"/home/dedy/Pictures/screenshoot/.screenshoot.sh"
+    m:0x0 + c:107
+    Print
+"firefox"
+    m:0x40 + c:25
+    Mod4 + w
+"pcmanfm"
+    m:0x40 + c:26
+    Mod4 + e
+"terminal"
+    m:0x40 + c:28
+    Mod4 + t
+"lxtask"
+    m:0xc + c:119
+    Control+Alt + Delete
+"oblogout"
+    m:0x0 + c:124
+    XF86PowerOff
+"sonata"
+    m:0x40 + c:58
+    Mod4 + m
+"/home/dedy/Documents/volume/volup"
+    m:0x40 + c:111
+    Mod4 + Up
+"/home/dedy/Documents/volume/voldown"
+    m:0x40 + c:116
+    Mod4 + Down
+"amixer set Master toggle"
+    m:0x0 + c:121
+    XF86AudioMute
