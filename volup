@@ -1,0 +1,2 @@
+#!/bin/bash
+pamixer --unmute --increase 3 && pkill notify-osd && notify-send -i multimedia-volume-contorl --urgency=critical "Volume" `echo $(pamixer --get-volume)`
