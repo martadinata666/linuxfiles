@@ -13,7 +13,7 @@ makedepends=('compface' 'openssl')
 options=('!libtool')
 install="sylpheed.install"
 source=("http://sylpheed.sraoss.jp/sylpheed/v3.2/sylpheed-$pkgver.tar.bz2"
-        "sylpheed-elementary-3.1.3.tar.bz2")
+        "http://reaktor42.de/~b52/code/$pkgname/sylpheed-elementary-3.1.3.tar.bz2")
 md5sums=('bbb691cf2bb11f84b329e68b58a62918'
          'cc2f5a814fca47176ac7465c6432b226')
 
