@@ -1,0 +1,41 @@
+# Maintainer: kiefer <jorgelmadrid@gmail.com>
+# Contributor: Alessio Sergi <asergi at archlinux dot us>
+# Contributor: Gaute Hope <eg@gaute.vetsj.com>
+# Contributor: Marcos Heredia <chelqo@gmail.com>
+
+pkgname=gtkhotkey
+pkgver=0.2.1
+_pkgmainver=0.2
+pkgrel=5
+pkgdesc="Platform independent hotkey handling for Gtk+ applications"
+arch=('i686' 'x86_64')
+url="https://launchpad.net/gtkhotkey"
+license=('LGPL3')
+depends=('gtk2')
+makedepends=('intltool')
+options=('!libtool')
+source=("http://launchpad.net/${pkgname}/${_pkgmainver}/${pkgver}/+download/${pkgname}-${pkgver}.tar.gz"
+        "fix_doc_prefix.patch")
+md5sums=('bfdc73e68e9adbe0d506d31a25862914'
+         '5e22c2d0fe827829a91d6f0668a34e4c')
+
+build() {
+  cd "${srcdir}/${pkgname}-${pkgver}"
+
+  patch -Np1 -i ${srcdir}/fix_doc_prefix.patch
+  sed -i "s|glib/gquark\.h|glib.h|" src/gtk-hotkey-error.h
+  sed -i "s|glib/gtypes\.h|glib.h|" src/x11/tomboykeybinder.h
+
+  ./configure --prefix=/usr
+  make
+}
+
+package() {
+  cd "${srcdir}/${pkgname}-${pkgver}"
+
+  make DESTDIR="${pkgdir}" install
+
+  install -dm755 $pkgdir/usr/share/licenses/$pkgname/
+  cd $pkgdir/usr/share/licenses/$pkgname/
+  ln -s ../../doc/$pkgname/COPYING .
+}
